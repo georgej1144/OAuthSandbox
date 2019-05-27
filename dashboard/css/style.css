@@ -123,6 +123,11 @@ td {
 td a {
     text-decoration: none;
     color:  #2E2C4D;
+    cursor: default;
+}
+
+.unit:hover {
+    cursor: pointer;
 }
 
 .unit:hover h2{
