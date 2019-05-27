@@ -1,0 +1,135 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  background-color: #EEF3ED;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #2E2C4D;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.navbar li img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 16px;
+  text-decoration: none;
+  color: #EEF3ED;
+
+}
+
+#dash {
+    background-image: url(dashboard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    padding-top: 40%;
+}
+
+#FRQ {
+    background-image: url(FRQ.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    padding-top: 40%;
+}
+
+#FRQItem:hover #FRQ{
+    background-image: url(FRQHover.png)
+}
+
+#formula {
+    background-image: url(formula.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-top: 40%;
+}
+
+#formulaItem:hover #formula{
+    background-image: url(formulaHover.png);
+
+}
+
+.navbar li.active {
+  background-color: #3a3763;
+  color: #EEF3ED;
+  border-left: 6px solid #4382B1;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #ddd;
+  color: #2E2C4D;
+}
+
+table {
+    width: 75%;
+    margin-left: 25%;
+    height: 100%;
+}
+
+table, th, td {
+    border: 25px solid #EEF3ED;
+    border-collapse: collapse;
+}
+
+td {
+    float: center;
+
+}
+
+.unit {
+    background-color: #dce0db;
+    border-radius: 2px;
+    width: 80%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+}
+
+.unit h3 {
+    margin-left: 5%;
+    margin-top: 7%;
+    font-size: 17px;
+}
+
+.unit h2 {
+    padding-top: 5%;
+    margin-left: 5%;
+}
+
+.unit ul {
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+td a {
+    text-decoration: none;
+    color:  #2E2C4D;
+}
+
+.unit:hover h2{
+    text-decoration: underline;
+}
+
+.loading {
+    margin-left: auto;
+    margin-right: 1%;
+}
