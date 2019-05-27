@@ -11,5 +11,8 @@ function showProgress(element, progress){
 showProgress("#ldBar1", 75);
 showProgress("#ldBar2", 50);
 showProgress("#ldBar3", 15);
+showProgress("#ldBar4", 89);
+showProgress("#ldBar5", 95);
+showProgress("#ldBar6", 100);
 
 });
