@@ -100,6 +100,68 @@ var json = {
    "title": "Question 1.2"
   },
   {
+   "name": "Question 1.3",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question1.3",
+     "title": "How many protons are there in Sn?",
+     "valueName": "question1 3",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "50"
+      },
+      {
+       "value": "item2",
+       "text": "22"
+      },
+      {
+       "value": "item3",
+       "text": "14"
+      },
+      {
+       "value": "item4",
+       "text": "119"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question1 2} = \"item1\"",
+   "title": "Question 1.3"
+  },
+  {
+   "name": "Question 1.4",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question1.4",
+     "title": "What is the atomic number of Sn?",
+     "valueName": "question1 4",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "50"
+      },
+      {
+       "value": "item2",
+       "text": "22"
+      },
+      {
+       "value": "item3",
+       "text": "14"
+      },
+      {
+       "value": "item4",
+       "text": "119"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question1 3} = \"item1\"",
+   "title": "Question 1.4"
+  },
+  {
    "name": "Question 1.5",
    "elements": [
     {
@@ -1038,7 +1100,7 @@ var json = {
    "elements": [
     {
      "type": "html",
-     "name": "Complete",
+     "name": "Complete1",
      "html": "<h3>You completed Unit 1</h3>"
     }
    ]
