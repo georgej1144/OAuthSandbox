@@ -1161,24 +1161,24 @@ survey
         options.html = str;
     });
 
-    var subQuestions = []
-    var questions = survey.getAllQuestions();
-    for (var i = 0; i < questions.length; i++){
-        if (questions[i].name.slice(-1) > 1) {
-            subQuestions.push(questions[i].name);
-        }
+var subQuestions = []
+var questions = survey.getAllQuestions();
+for (var i = 0; i < questions.length; i++){
+    if ((questions[i].name.slice(-1)) > 1 && (questions[i].name.substring(0, 1) != "H")) {
+        subQuestions.push(questions[i].name);
     }
-    console.log(subQuestions);
+}
+console.log(subQuestions);
 
-    function surveyValidateQuestion(s, options) {
-        for (var i = 0; i < subQuestions.length; i++){
-            if (options.name == subQuestions[i]) {
-               if(options.value != 'item1') {
-                    options.error = "The answer is not correct. Please give another answer.";
-                }
+function surveyValidateQuestion(s, options) {
+    for (var i = 0; i < subQuestions.length; i++){
+        if (options.name == subQuestions[i]) {
+           if(options.value != 'item1') {
+                options.error = "The answer is not correct. Please give another answer.";
             }
         }
     }
+}
 
 //Randomizes answer order
 // var questions = survey.getAllQuestions();
