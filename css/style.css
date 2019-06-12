@@ -10,138 +10,108 @@ body {
 }
 
 .navbar {
-  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
   background-color: #2E2C4D;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#signUp, #signIn {
-  float: right;
-  color: #f2f2f2;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Work Sans', sans-serif;
   text-align: center;
-  padding: 20px 22px;
+  letter-spacing: 2px;
+}
+
+.navbar li img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 16px;
   text-decoration: none;
-  font-size: 17px;
+  color: #EEF3ED;
+
 }
 
-.navbar #logo {
-    float: left;
-    margin-left: 20px;
-    cursor: pointer;
+
+#dash {
+    background-image: url(dashboard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    padding-top: 40%;
 }
 
-#signUp {
-  background-color: #4382B1;
-  border-left: 3px solid #EEF3EE;
+#dashboardItem:hover #dash {
+    background-image: url(dashboardHover.png);
 }
 
-#signIn {
-  border-left: 1px solid #EEF3EE;
-  background-color: #D99C35;
+#FRQ {
+    background-image: url(FRQ.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    padding-top: 40%;
 }
 
-#signUp:hover, #signIn:hover {
+#FRQItem:hover #FRQ{
+    background-image: url(FRQHover.png);
+}
+
+#formula {
+    background-image: url(formula.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-top: 40%;
+}
+
+#formulaItem:hover #formula{
+    background-image: url(formulaHover.png);
+
+}
+
+.navbar li.active {
+  background-color: #3a3763;
+  color: #EEF3ED;
+  border-left: 6px solid #4382B1;
+}
+
+.navbar li a:hover:not(.active) {
   background-color: #ddd;
   color: #2E2C4D;
 }
 
-#title {
-  text-align: center;
-  padding-top: 217px;
-  margin-top: 75px;
-  background-image: url(LogoCropped.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 400px auto;
+
+#surveyElement {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
-#imgContainer{
-    float: left;
-    width: 40%
+
+.sv_qstn {
+    border-radius: 5px;
+    background-color: #dce0db;
 }
 
-#paragraph1 {
-    float: left;
-    width: 50%
+.sv_main {
+    background-color: #EEF3ED;
+    border-radius: 5px;
 }
 
-@media screen and (max-width: 1100px) {
-  #imgContainer, #paragraph1 {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  #paragraph1 {
-      margin-top: 35px;
-  }
+
+.sq-title {
+    font-family:'Open Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 2.5%;
 }
 
-#paragraph1 p {
-    text-align: justify;
-    padding-top: 15px;
-    line-height: 1.55em;
+.sq-label {
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
-}
-
-#description {
-  margin-top: 125px;
-  margin-left: 75px;
-  color: #616161;
-}
-
-#btnContainer {
-    margin-top: 40px;
-}
-
-.btn {
-    background-color: #d99d35;
-    cursor: pointer;
-    color: #f2f2f2;
-    font-size: 18px;
-    margin-top: 125px;
-    padding: 10px 17px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: #e5a432;
-}
-
-#snippits {
-    padding-top: 350px;
-    text-align: center;
-    padding-bottom: 150px;
-}
-
-#snippits div {
-    width: 30%;
-    margin-left: 100px;
-    text-align: center;
-    display: inline-block;
-}
-
-#snippits div p {
-    text-align: center;
-    color: #616161;
-    margin-top: 15px;
-    font-size: 17px;
-    width: 70%;
-    display: inline-block;
-}
-
-#snippits div h2 {
-    text-align: center;
-    color: #4382B1;
-    margin-top: 10px;
-}
-
-#bottomText {
-    text-align: center;
-    font-size: 14px;
-    color: #918f8f;
-    padding-bottom: 20px;
-    padding-top: 5px;
-    border-top: 1px solid #918f8f;
-}
-
-#collegeboard {
-    font-size: 11px;
 }
