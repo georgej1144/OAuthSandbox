@@ -88,72 +88,16 @@ var json = {
        "text": "10"
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "video1",
+     "visibleIf": "{question1 2} = \"item2\" or {question1 2} = \"item3\" or {question1 2} = \"item4\"",
+     "html": "<h5>Watch this video to understand the concept of this question.</h5>\n<div style=\"text-align: center;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_S7ov25y3_M\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
     }
    ],
    "visibleIf": "{question1 1} <> \"item1\"",
    "title": "Question 1.2"
-  },
-  {
-   "name": "Question 1.3",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.3",
-     "title": "How many protons are there in Sn?",
-     "valueName": "question1 3",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "50"
-      },
-      {
-       "value": "item2",
-       "text": "22"
-      },
-      {
-       "value": "item3",
-       "text": "14"
-      },
-      {
-       "value": "item4",
-       "text": "119"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 2} = \"item1\"",
-   "title": "Question 1.3"
-  },
-  {
-   "name": "Question 1.4",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.4",
-     "title": "What is the atomic number of Sn?",
-     "valueName": "question1 4",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "50"
-      },
-      {
-       "value": "item2",
-       "text": "22"
-      },
-      {
-       "value": "item3",
-       "text": "14"
-      },
-      {
-       "value": "item4",
-       "text": "119"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 3} = \"item1\"",
-   "title": "Question 1.4"
   },
   {
    "name": "Question 1.5",
