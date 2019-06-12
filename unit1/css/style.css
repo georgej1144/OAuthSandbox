@@ -1,0 +1,116 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  background-color: #EEF3ED;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #2E2C4D;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.navbar li img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px 16px;
+  text-decoration: none;
+  color: #EEF3ED;
+
+}
+
+
+#dash {
+    background-image: url(dashboard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    padding-top: 40%;
+}
+
+#dashboardItem:hover #dash {
+    background-image: url(dashboardHover.png);
+}
+
+#FRQ {
+    background-image: url(FRQ.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    padding-top: 40%;
+}
+
+#FRQItem:hover #FRQ{
+    background-image: url(FRQHover.png);
+}
+
+#formula {
+    background-image: url(formula.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-top: 40%;
+}
+
+#formulaItem:hover #formula{
+    background-image: url(formulaHover.png);
+
+}
+
+.navbar li.active {
+  background-color: #3a3763;
+  color: #EEF3ED;
+  border-left: 6px solid #4382B1;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #ddd;
+  color: #2E2C4D;
+}
+
+
+#surveyElement {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 10%;
+}
+
+
+.sv_qstn {
+    border-radius: 5px;
+    background-color: #dce0db;
+}
+
+.sv_main {
+    background-color: #EEF3ED;
+    border-radius: 5px;
+}
+
+
+.sq-title {
+    font-family:'Open Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 2.5%;
+}
+
+.sq-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}

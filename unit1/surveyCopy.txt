@@ -1,0 +1,380 @@
+<!-- Your platform (jquery) scripts. -->
+
+<script src="https://surveyjs.azureedge.net/1.0.91/survey.jquery.min.js"></script>
+
+
+<div id="surveyContainer"></div>
+
+Survey.Survey.cssType = "bootstrap";
+
+var surveyJSON = {
+ "title": "Unit 1",
+ "completedHtml": "<h3>You completed Unit 1</h3>",
+ "pages": [
+  {
+   "name": "Question 1.1",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question1",
+     "title": "How many protons are there in oxygen?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "8"
+      },
+      {
+       "value": "item2",
+       "text": "16"
+      },
+      {
+       "value": "item3",
+       "text": "48"
+      },
+      {
+       "value": "item4",
+       "text": "4"
+      }
+     ],
+     "otherText": "4"
+    }
+   ],
+   "questionsOrder": "random"
+  },
+  {
+   "name": "Question 1.2",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question2",
+     "title": "What is the atomic number of oxygen?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "8"
+      },
+      {
+       "value": "item2",
+       "text": "15.999"
+      },
+      {
+       "value": "item3",
+       "text": "6"
+      },
+      {
+       "value": "item4",
+       "text": "10"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question1} <> \"item1\""
+  },
+  {
+   "name": "Question 1.3",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question3",
+     "title": "How many protons are there in Sn?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "50"
+      },
+      {
+       "value": "item2",
+       "text": "22"
+      },
+      {
+       "value": "item3",
+       "text": "14"
+      },
+      {
+       "value": "item4",
+       "text": "119"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question2} = \"item1\""
+  },
+  {
+   "name": "Question 1.4",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question4",
+     "title": "What is the atomic number of Sn?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "50"
+      },
+      {
+       "value": "item2",
+       "text": "22"
+      },
+      {
+       "value": "item3",
+       "text": "14"
+      },
+      {
+       "value": "item4",
+       "text": "119"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question3} = \"item1\""
+  },
+  {
+   "name": "Question 1.5",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question5",
+     "title": "How many protons are there in thulium?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "69"
+      },
+      {
+       "value": "item2",
+       "text": "169"
+      },
+      {
+       "value": "item3",
+       "text": "90"
+      },
+      {
+       "value": "item4",
+       "text": "16"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question4} = \"item1\""
+  },
+  {
+   "name": "Question 1.6",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question6",
+     "title": "What is the atomic number of thulium?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "69"
+      },
+      {
+       "value": "item2",
+       "text": "169"
+      },
+      {
+       "value": "item3",
+       "text": "168.934"
+      },
+      {
+       "value": "item4",
+       "text": "16"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question5} = \"item1\""
+  },
+  {
+   "name": "Question 2.1",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question7",
+     "title": "Which element has 92 protons?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "U"
+      },
+      {
+       "value": "item2",
+       "text": "Nb"
+      },
+      {
+       "value": "item3",
+       "text": "Nd"
+      },
+      {
+       "value": "item4",
+       "text": "Ir"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question6} = \"item1\" or {question1} = \"item1\""
+  },
+  {
+   "name": "Question 2.2",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question8",
+     "title": "What atomic number does an element with 92 protons have?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "92"
+      },
+      {
+       "value": "item2",
+       "text": "46"
+      },
+      {
+       "value": "item3",
+       "text": "184"
+      },
+      {
+       "value": "item4",
+       "text": "8"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question7} <> \"item1\""
+  },
+  {
+   "name": "Question 2.3",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question9",
+     "title": "What element has 77 protons?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "V"
+      },
+      {
+       "value": "item2",
+       "text": "Hf"
+      },
+      {
+       "value": "item3",
+       "text": "As"
+      },
+      {
+       "value": "item4",
+       "text": "Ir"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question8} = \"item1\""
+  },
+  {
+   "name": "Question 2.4",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question10",
+     "title": "What atomic number does an element with 77 protons have?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "77"
+      },
+      {
+       "value": "item2",
+       "text": "149"
+      },
+      {
+       "value": "item3",
+       "text": "144"
+      },
+      {
+       "value": "item4",
+       "text": "38"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question9} = \"item1\""
+  },
+  {
+   "name": "Question 2.5",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question11",
+     "title": "What element has 42 protons?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "Mo"
+      },
+      {
+       "value": "item2",
+       "text": "Ca"
+      },
+      {
+       "value": "item3",
+       "text": "I"
+      },
+      {
+       "value": "item4",
+       "text": "Mn"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question10} = \"item1\""
+  },
+  {
+   "name": "Question 2.6",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question12",
+     "title": "What atomic number does an element with 42 protons have?",
+     "choices": [
+      {
+       "value": "item1",
+       "text": "42"
+      },
+      {
+       "value": "item2",
+       "text": "84"
+      },
+      {
+       "value": "item3",
+       "text": "21"
+      },
+      {
+       "value": "item4",
+       "text": "53"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question11} = \"item1\""
+  }
+ ],
+ "sendResultOnPageNext": true,
+ "showPrevButton": false,
+ "showTitle": false,
+ "questionsOrder": "random",
+ "showQuestionNumbers": "off"
+}
+
+function sendDataToServer(survey) {
+    //send Ajax request to your web server.
+    alert("The results are:" + JSON.stringify(survey.data));
+}
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").Survey({
+    model: survey,
+    onComplete: sendDataToServer
+});
