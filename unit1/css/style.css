@@ -99,12 +99,6 @@ body {
     background-color: #dce0db;
 }
 
-.sv_main {
-    background-color: #EEF3ED;
-    border-radius: 5px;
-}
-
-
 .sq-title {
     font-family:'Open Sans', sans-serif;
     font-size: 25px;
@@ -114,4 +108,10 @@ body {
 .sq-label {
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
+}
+
+.sv_main.sv_default_css input[type="button"]:disabled, .sv_main.sv_default_css input[type="button"]:disabled:hover {
+    color: white;
+    background-color: gray;
+    cursor: default;
 }
