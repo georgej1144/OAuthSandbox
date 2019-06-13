@@ -1,9 +1,11 @@
+//Initializes survey with default theme that could be changed later
 Survey
     .StylesManager
-    .applyTheme("bootstrap");
+    .applyTheme("default");
 
+//Changes theme with custom keywords for css
 var myCss = {
-    root: "sv_main sv_bootstrap_css",
+    root: "sv_main sv_default_css",
     navigationButton: "button btn-large",
     question: {
 		"mainRoot": "sv_qstn",
@@ -20,7 +22,7 @@ var myCss = {
 
 
 
-
+//Quiz data
 var json = {
  "title": "Unit 1",
  "completedHtml": "<h3>Nice work! Now move on to the next unit. </h3>",
@@ -62,8 +64,8 @@ var json = {
    "elements": [
     {
      "type": "html",
-     "name": "HTML1",
-     "html": "<h3>You answered the previous question incorrectly. The following questions will help you understand the core concepts of this unit. </h3>"
+     "name": "video1",
+     "html": "<h3>You answered the previous question incorrectly. The following question and video will help you understand the core concepts of this unit. </h3>\n<div style=\"text-align: center;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_S7ov25y3_M\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
     },
     {
      "type": "radiogroup",
@@ -91,137 +93,13 @@ var json = {
     },
     {
      "type": "html",
-     "name": "video1",
-     "visibleIf": "{question1 2} = \"item2\" or {question1 2} = \"item3\" or {question1 2} = \"item4\"",
-     "html": "<h5>Watch this video to understand the concept of this question.</h5>\n<div style=\"text-align: center;\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_S7ov25y3_M\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>"
+     "name": "button1",
+     "visibleIf": "{question1 2} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 1.1 Again</button></div>"
     }
    ],
    "visibleIf": "{question1 1} <> \"item1\"",
    "title": "Question 1.2"
-  },
-  {
-   "name": "Question 1.3",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.3",
-     "title": "How many protons are there in Sn?",
-     "valueName": "question1 3",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "50"
-      },
-      {
-       "value": "item2",
-       "text": "22"
-      },
-      {
-       "value": "item3",
-       "text": "14"
-      },
-      {
-       "value": "item4",
-       "text": "119"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 2} = \"item1\"",
-   "title": "Question 1.3"
-  },
-  {
-   "name": "Question 1.4",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.4",
-     "title": "What is the atomic number of Sn?",
-     "valueName": "question1 4",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "50"
-      },
-      {
-       "value": "item2",
-       "text": "22"
-      },
-      {
-       "value": "item3",
-       "text": "14"
-      },
-      {
-       "value": "item4",
-       "text": "119"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 3} = \"item1\"",
-   "title": "Question 1.4"
-  },
-  {
-   "name": "Question 1.5",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.5",
-     "title": "How many protons are there in thulium?",
-     "valueName": "question1 5",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "69"
-      },
-      {
-       "value": "item2",
-       "text": "169"
-      },
-      {
-       "value": "item3",
-       "text": "90"
-      },
-      {
-       "value": "item4",
-       "text": "16"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 4} = \"item1\"",
-   "title": "Question 1.5"
-  },
-  {
-   "name": "Question 1.6",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question1.6",
-     "title": "What is the atomic number of thulium?",
-     "valueName": "question1 6",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "69"
-      },
-      {
-       "value": "item2",
-       "text": "169"
-      },
-      {
-       "value": "item3",
-       "text": "168.934"
-      },
-      {
-       "value": "item4",
-       "text": "16"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question1 5} = \"item1\"",
-   "title": "Question 1.6"
   },
   {
    "name": "Question 2.1",
@@ -251,7 +129,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question1 1} = \"item1\" or {question1 6} = \"item1\"",
+   "visibleIf": "{question1 1} = \"item1\"",
    "title": "Question 2.1"
   },
   {
@@ -259,8 +137,8 @@ var json = {
    "elements": [
     {
      "type": "html",
-     "name": "HTML2",
-     "html": "<h3>You answered the previous question incorrectly. The following questions will help you understand the core concepts of this unit. </h3>"
+     "name": "header2",
+     "html": "<h3>You answered the previous question incorrectly. The following question will help you understand the core concepts of this unit. </h3>\n"
     },
     {
      "type": "radiogroup",
@@ -285,134 +163,16 @@ var json = {
        "text": "8"
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button2",
+     "visibleIf": "{question2 2} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 2.1 Again</button></div>"
     }
    ],
    "visibleIf": "{question2 1} <> \"item1\"",
    "title": "Question 2.2"
-  },
-  {
-   "name": "Question 2.3",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question2.3",
-     "title": "What element has 77 protons?",
-     "valueName": "question2 3",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "V"
-      },
-      {
-       "value": "item2",
-       "text": "Hf"
-      },
-      {
-       "value": "item3",
-       "text": "As"
-      },
-      {
-       "value": "item4",
-       "text": "Ir"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question2 2} = \"item1\"",
-   "title": "Question 2.3"
-  },
-  {
-   "name": "Question 2.4",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question2.4",
-     "title": "What atomic number does an element with 77 protons have?",
-     "valueName": "question2 4",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "77"
-      },
-      {
-       "value": "item2",
-       "text": "149"
-      },
-      {
-       "value": "item3",
-       "text": "144"
-      },
-      {
-       "value": "item4",
-       "text": "38"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question2 3} = \"item1\"",
-   "title": "Question 2.4"
-  },
-  {
-   "name": "Question 2.5",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question2.5",
-     "title": "What element has 42 protons?",
-     "valueName": "question2 5",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "Mo"
-      },
-      {
-       "value": "item2",
-       "text": "Ca"
-      },
-      {
-       "value": "item3",
-       "text": "I"
-      },
-      {
-       "value": "item4",
-       "text": "Mn"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question2 4} = \"item1\"",
-   "title": "Question 2.5"
-  },
-  {
-   "name": "Question 2.6",
-   "elements": [
-    {
-     "type": "radiogroup",
-     "name": "question2.6",
-     "title": "What atomic number does an element with 42 protons have?",
-     "valueName": "question2 6",
-     "choices": [
-      {
-       "value": "item1",
-       "text": "42"
-      },
-      {
-       "value": "item2",
-       "text": "84"
-      },
-      {
-       "value": "item3",
-       "text": "21"
-      },
-      {
-       "value": "item4",
-       "text": "53"
-      }
-     ]
-    }
-   ],
-   "visibleIf": "{question2 5} = \"item1\"",
-   "title": "Question 2.6"
   },
   {
    "name": "Question 3.1",
@@ -442,7 +202,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question2 1} = \"item1\" or {question2 6} = \"item1\"",
+   "visibleIf": "{question2 1} = \"item1\"",
    "title": "Question 3.1"
   },
   {
@@ -507,9 +267,15 @@ var json = {
        "text": "2+"
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button3",
+     "visibleIf": "{question3 3} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 3.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question3 2} = \"item1\"",
+   "visibleIf": "{question3 2} = \"item1\" and {question3 1} <> \"item1\"",
    "title": "Question 3.3"
   },
   {
@@ -540,7 +306,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question3 1} = \"item1\" or {question3 3} = \"item1\"",
+   "visibleIf": "{question3 1} = \"item1\"",
    "title": "Question 4.1"
   },
   {
@@ -605,9 +371,15 @@ var json = {
        "text": "2+"
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button4",
+     "visibleIf": "{question4 3} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 4.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question4 2} = \"item1\"",
+   "visibleIf": "{question4 2} = \"item1\" and {question4 1} <> \"item1\"",
    "title": "Question 4.3"
   },
   {
@@ -638,7 +410,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question4 1} = \"item1\" or {question4 3} = \"item1\"",
+   "visibleIf": "{question4 1} = \"item1\"",
    "title": "Question 5.1"
   },
   {
@@ -703,9 +475,15 @@ var json = {
        "text": "2+"
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button5",
+     "visibleIf": "{question5 3} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 5.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question5 2} = \"item1\"",
+   "visibleIf": "{question5 2} = \"item1\" and {question5 1} <> \"item1\"",
    "title": "Question 5.3"
   },
   {
@@ -736,7 +514,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question5 1} = \"item1\" or {question5 3} = \"item1\"",
+   "visibleIf": "{question5 1} = \"item1\"",
    "title": "Question 6.1"
   },
   {
@@ -803,7 +581,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question6 2} = \"item1\"",
+   "visibleIf": "{question6 2} = \"item1\" and {question6 1} <> \"item1\"",
    "title": "Question 6.3"
   },
   {
@@ -832,9 +610,15 @@ var json = {
        "text": "All options."
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button6",
+     "visibleIf": "{question6 4} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 6.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question6 3} = \"item1\"",
+   "visibleIf": "{question6 3} = \"item1\" and {question6 1} <> \"item1\"",
    "title": "Question 6.4"
   },
   {
@@ -865,7 +649,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question6 1} = \"item1\" or {question6 4} = \"item1\"",
+   "visibleIf": "{question6 1} = \"item1\"",
    "title": "Question 7.1"
   },
   {
@@ -932,7 +716,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question7 2} = \"item1\"",
+   "visibleIf": "{question7 2} = \"item1\" and {question7 1} <> \"item1\"",
    "title": "Question 7.3"
   },
   {
@@ -961,9 +745,15 @@ var json = {
        "text": "All options."
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button7",
+     "visibleIf": "{question7 4} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 7.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question7 3} = \"item1\"",
+   "visibleIf": "{question7 3} = \"item1\" and {question7 1} <> \"item1\"",
    "title": "Question 7.4"
   },
   {
@@ -994,7 +784,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question7 1} = \"item1\" or {question7 4} = \"item1\"",
+   "visibleIf": "{question7 1} = \"item1\"",
    "title": "Question 8.1"
   },
   {
@@ -1061,7 +851,7 @@ var json = {
      ]
     }
    ],
-   "visibleIf": "{question8 2} = \"item1\"",
+   "visibleIf": "{question8 2} = \"item1\" and {question8 1} <> \"item1\"",
    "title": "Question 8.3"
   },
   {
@@ -1090,9 +880,15 @@ var json = {
        "text": "All options."
       }
      ]
+    },
+    {
+     "type": "html",
+     "name": "button8",
+     "visibleIf": "{question8 4} = \"item1\"",
+     "html": "<div style=\"text-align: center;\"><button id=\"returnBtn\" onclick=\"prevQuestion()\">Attempt Question 8.1 Again</button></div>"
     }
    ],
-   "visibleIf": "{question8 3} = \"item1\"",
+   "visibleIf": "{question8 3} = \"item1\" and {question8 1} <> \"item1\"",
    "title": "Question 8.4"
   },
   {
@@ -1112,8 +908,11 @@ var json = {
  "questionsOrder": "random",
  "showQuestionNumbers": "off"
 };
+
+//Initializes quiz with data
 window.survey = new Survey.Model(json);
 
+//When the survey is completed submit data
 survey
     .onComplete
     .add(function (result) {
@@ -1122,6 +921,7 @@ survey
             .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
     });
 
+//Update css classes with custom keywords
 survey
     .onUpdateQuestionCssClasses
     .add(function (survey, options) {
@@ -1145,7 +945,6 @@ survey
         }
     });
 
-$("#surveyElement").Survey({model: survey, onValidateQuestion: surveyValidateQuestion});;
 
 //Create showdown markdown converter
 var converter = new showdown.Converter();
@@ -1161,16 +960,53 @@ survey
         options.html = str;
     });
 
-var subQuestions = []
+//Creates an array of quiz names that are subQuestions
+var subQuestions = [];
 var questions = survey.getAllQuestions();
 for (var i = 0; i < questions.length; i++){
-    if ((questions[i].name.slice(-1)) > 1 && (questions[i].name.substring(0, 1) != "H")) {
+    if ((questions[i].name.slice(-1)) > 1 && (questions[i].name.includes("question"))) {
         subQuestions.push(questions[i].name);
     }
 }
+
 console.log(subQuestions);
 
-function surveyValidateQuestion(s, options) {
+//Finding the questions that should have a disabled next button and redirect to the main question
+var lastQuestion = subQuestions[subQuestions.length-1];
+var lastNum = lastQuestion.substring(lastQuestion.indexOf('.')-1, lastQuestion.indexOf('.'));
+console.log(lastQuestion, lastNum);
+
+var returnQuestions = [];
+for (var num = 1; num <= lastNum; num++){
+    for (var i = 0; i < subQuestions.length; i++){
+        if (subQuestions[i].substring(subQuestions[i].indexOf('.')-1, subQuestions[i].indexOf('.')) == num){
+            var returnQuestion = subQuestions[i];
+        }
+    }
+    returnQuestions.push(returnQuestion);
+}
+console.log(returnQuestions);
+
+//Disable the next button on the last question in subquestion, to force a redirect to the beginning.
+var nextBtnDisableHandler = function(survey, options) {
+  var nextBtn = document.querySelector(".sv_next_btn");
+  nextBtn.disabled = false;
+  for (var i = 0; i < returnQuestions.length; i++){
+      if (survey.currentPage == survey.getPageByQuestion(survey.getQuestionByName(returnQuestions[i]))) {
+          nextBtn.disabled = true;
+      }
+  }
+};
+
+//Check if the next button should be disabled when a new page is loaded.
+survey.onCurrentPageChanged.add(nextBtnDisableHandler);
+//Check if the next button should be disabled when a new answer is selected.
+survey.onValueChanged.add(nextBtnDisableHandler);
+//Change setting to check for errors for when the values are changed instead of when the next button is pressed.
+survey.checkErrorsMode = "onValueChanged";
+
+//Check if the selected answer is the correct answer.
+survey.onValidateQuestion.add(function (s, options) {
     for (var i = 0; i < subQuestions.length; i++){
         if (options.name == subQuestions[i]) {
            if(options.value != 'item1') {
@@ -1178,7 +1014,25 @@ function surveyValidateQuestion(s, options) {
             }
         }
     }
+});
+
+//Finds the page of the main question that the return button will change to.
+function prevQuestion() {
+    for (var i = 0; i < subQuestions.length; i++){
+        console.log(subQuestions[i])
+        if (survey.currentPage == survey.getPageByQuestion(survey.getQuestionByName(subQuestions[i]))) {
+            currentQuestion = subQuestions[i];
+        }
+    }
+    alert(currentQuestion);
+    var initialQuestion = currentQuestion.substring(0, currentQuestion.indexOf('.')+1)+"1";
+console.log(initialQuestion);
+    survey.currentPage = survey.getPageByQuestion(survey.getQuestionByName(initialQuestion));
+
 }
+
+//Add above JS to HTML
+$("#surveyElement").Survey({model: survey});
 
 //Randomizes answer order
 // var questions = survey.getAllQuestions();
