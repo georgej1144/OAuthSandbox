@@ -1024,7 +1024,6 @@ function prevQuestion() {
             currentQuestion = subQuestions[i];
         }
     }
-    alert(currentQuestion);
     var initialQuestion = currentQuestion.substring(0, currentQuestion.indexOf('.')+1)+"1";
 console.log(initialQuestion);
     survey.currentPage = survey.getPageByQuestion(survey.getQuestionByName(initialQuestion));
